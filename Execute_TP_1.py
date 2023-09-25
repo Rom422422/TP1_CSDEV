@@ -39,4 +39,14 @@ print("La date 33/12/13 existe : False -> :", date_valide(13,13,13))
 print("La date 31/11/234 existe : False -> :", date_valide(31,11,234))
 print("La date 30/2/234 existe : False -> :", date_valide(30,2,234))
 
+#Programme principale 
+'''
+Programme qui propose la saisie d'une date , la valide et affiche si elle est valide.
+'''
+Jour, Mois, Annee = int(input("Veuillez rentrer le jour : ")), int(input("Veuillez rentrer le mois : ")),int(input("Veuillez rentrer l'année : "))
+Verif = date_valide(Jour, Mois, Annee)
+if Verif == True: 
+    print("Date valide")
+else:
+    print("Date non valide")
 
