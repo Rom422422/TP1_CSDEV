@@ -43,10 +43,45 @@ print("La date 30/2/234 existe : False -> :", date_valide(30,2,234))
 '''
 Programme qui propose la saisie d'une date , la valide et affiche si elle est valide.
 '''
-Jour, Mois, Annee = int(input("Veuillez rentrer le jour : ")), int(input("Veuillez rentrer le mois : ")),int(input("Veuillez rentrer l'année : "))
+'''Jour, Mois, Annee = int(input("Veuillez rentrer le jour : ")), int(input("Veuillez rentrer le mois : ")),int(input("Veuillez rentrer l'année : "))
 Verif = date_valide(Jour, Mois, Annee)
 if Verif == True: 
     print("Date valide")
 else:
     print("Date non valide")
+'''
+
+
+
+# Header
+'''
+Que fait le programme : Il calcule les impots d'une personnne célibataire
+Qui l'a fait : Thibaut Romain
+Quand à t'il était réalisé : 25/09/2023 
+Que reste-t-il à faire : Faire en sorte que le programme tronque a l'inférieur
+'''
+#Importation des bibilotheque 
+from Code_TP_1 import mesImpots as mesImpots
+
+'''revenu = int(input("Quelles sont vos revenus? en entier : "))
+print("Vous serez taxez de : ", mesImpots(revenu), "$")'''
+
+# Header
+'''
+Que fait le programme : Il calcule les impots d'une personnne célibataire
+Qui l'a fait : Thibaut Romain
+Quand à t'il était réalisé : 25/09/2023 
+Que reste-t-il à faire : Faire en sorte que le programme tronque a l'inférieur
+'''
+#Importation des bibilotheque 
+from Code_TP_1 import mult_matrice as mult
+
+M1 = [[1,0,0],[0,1,0],[0,0,1]]
+M2 = [[2,2,0],[0,1,9],[56,0,1]]
+M3 = [[2,2,2,2],[2,2,2,2],[2,2,2,2],[2,2,2,2]]
+M4 = [[2,2,2,2],[2,2,2,2],[2,2,2,2],[2,2,2,2]]
+#print(mult(M1,M2))
+print(mult(M3,M4))
+
+
 

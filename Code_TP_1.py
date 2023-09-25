@@ -54,11 +54,11 @@ def mesImpots(revenu):
     if 10226 <= revenu <= 26070:
         return floor((revenu - 10225) * 11 / 100)
     elif 26071 <= revenu <= 74545:
-        return floor((revenu - 26071) * 30 / 100 + (26070 - 10225) * 11 / 100)
+        return floor((revenu - 26070) * 30 / 100 + (26070 - 10225) * 11 / 100)
     elif 74546 <= revenu <= 160336:
-        return floor((revenu - 74546) * 41 / 100 + (74545 - 26071) * 30 / 100 + (26070 - 10225) * 11 / 100)
+        return floor((revenu - 74545) * 41 / 100 + (74545 - 26070) * 30 / 100 + (26070 - 10225) * 11 / 100)
     elif 160336 <= revenu:
-        return floor((revenu- 160336) * 45 / 100 + (160336 - 74546) * 41 / 100 + (74545 - 26071) * 30 / 100 + (26070 - 10225) * 11 / 100)
+        return floor((revenu- 160336) * 45 / 100 + (160336 - 74545) * 41 / 100 + (74545 - 26070) * 30 / 100 + (26070 - 10225) * 11 / 100)
     return 0    
 
 # Header
@@ -68,3 +68,19 @@ Qui l'a fait : Thibaut Romain
 Quand à t'il était réalisé : 25/09/2023 
 Que reste-t-il à faire : Tout
 '''
+
+def mult_matrice(mat1,mat2):
+    valren, valeur = [[],[],[],[]], 0
+    for lignem1 in range(len(mat1)):
+        for colonne in range(len(mat2)):
+            for ligne in range(len(mat2)):
+                valeur += mat1[lignem1][ligne]*mat2[ligne][colonne]
+            valren[lignem1].append(valeur)
+            valeur = 0
+    return valren
+
+
+    
+
+
+
