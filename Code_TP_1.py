@@ -7,6 +7,7 @@ Quand à t'il était réalisé : 25/09/2023
 Que reste-t-il à faire : Tout sauf point 1
 '''
 
+
 def annee_bisextile(annee:int)->bool:#Annonce si l'année est bisextile ou non. entré : une année. sortie : True ou False
     if type(annee) != int :
         return("Vous n'avez pas selectionné une année en chiffre entier.") 
@@ -36,3 +37,34 @@ def date_valide(jour, mois, annee):#Analyse la date pour verifier si elle existe
         return True
     return False
 
+
+
+# Header
+'''
+Que fait le programme : Il calcule les impots d'une personnne célibataire
+Qui l'a fait : Thibaut Romain
+Quand à t'il était réalisé : 25/09/2023 
+Que reste-t-il à faire : 
+'''
+#Importation des bibilotheque
+from math import floor
+
+def mesImpots(revenu):
+    assert isinstance(revenu, int), "Chiffre entier uniquement wesh"
+    if 10226 <= revenu <= 26070:
+        return floor((revenu - 10225) * 11 / 100)
+    elif 26071 <= revenu <= 74545:
+        return floor((revenu - 26071) * 30 / 100 + (26070 - 10225) * 11 / 100)
+    elif 74546 <= revenu <= 160336:
+        return floor((revenu - 74546) * 41 / 100 + (74545 - 26071) * 30 / 100 + (26070 - 10225) * 11 / 100)
+    elif 160336 <= revenu:
+        return floor((revenu- 160336) * 45 / 100 + (160336 - 74546) * 41 / 100 + (74545 - 26071) * 30 / 100 + (26070 - 10225) * 11 / 100)
+    return 0    
+
+# Header
+'''
+Que fait le programme : Multiplication des matrices
+Qui l'a fait : Thibaut Romain
+Quand à t'il était réalisé : 25/09/2023 
+Que reste-t-il à faire : Tout
+'''
